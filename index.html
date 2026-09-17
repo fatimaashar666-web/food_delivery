@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RedBite | Food Delivery</title>
+  <!-- Font Awesome for icons (optional but used for cart icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <i class="fas fa-utensils"></i> Red<span>Bite</span>
+    </div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="cart-icon" id="cartIcon">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Delicious food, <span>delivered fast</span></h1>
+      <p>Order your favorite meals from our kitchen to your doorstep.</p>
+    </section>
+
+    <!-- Food menu grid -->
+    <section class="menu-section" id="menu">
+      <h2>Our Menu</h2>
+      <div class="menu-grid" id="menuGrid">
+        <!-- Items injected by JS -->
+      </div>
+    </section>
+
+    <!-- Cart summary and checkout -->
+    <section class="cart-section" id="cartSection">
+      <div class="cart-header">
+        <h2>Your Cart <i class="fas fa-shopping-bag"></i></h2>
+        <span class="cart-total-badge" id="cartTotalBadge">0 items</span>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart-msg" id="emptyCartMsg">Your cart is empty. Add some delicious food!</p>
+      </div>
+      <div class="cart-total">
+        Total: $<span id="totalPrice">0.00</span>
+      </div>
+
+      <!-- Checkout form -->
+      <form class="checkout-form" id="checkoutForm">
+        <h3>Checkout</h3>
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Full Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" id="phone" placeholder="Phone" required>
+          <input type="text" id="address" placeholder="Delivery Address" required>
+        </div>
+        <button type="submit" id="placeOrderBtn" class="btn-place-order">Place Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 RedBite. All rights reserved.</p>
+  </footer>
+
+  <!-- Toast notification (for order confirmation) -->
+  <div class="toast" id="toast">Your order is being prepared! 🍕</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
